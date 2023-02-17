@@ -33,10 +33,10 @@ galleryEl.addEventListener("click", (el) => {
   const instance = basicLightbox.create(
     `<img src="${targetLink}" width="800" height="600"/>`,
     {
-      onShow: (instance) => {
+      onShow: () => {
         window.addEventListener("keydown", EscKeyClose);
       },
-      onClose: (instance) => {
+      onClose: () => {
         window.removeEventListener("keydown", EscKeyClose);
       },
     }
